@@ -71,9 +71,9 @@ else:
 
     # リセット
     if st.button("もう一度"):
-        del st.session_state.choice
-        del st.session_state.base_card
-        del st.session_state.result_card
+        if "choice" in st.session_state:
+            del st.session_state.choice
+        st.rerun()
         
 
 
