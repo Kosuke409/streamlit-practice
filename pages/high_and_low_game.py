@@ -2,8 +2,29 @@ import streamlit as st
 import json
 from pathlib import Path
 
-from models.highlow import judge, base_card, result_card
+from models.highlow import judge
 
+
+# タイトル
+st.title("High & Low Game")
+
+# JSONファイルを読み込む
+json_path = Path(__file__).parent.parent / "sample_data" / "highlow.json"
+
+with open(json_path, "r", encoding="utf-8") as f:
+    data = json.load(f)
+
+# カードの情報
+base_card = data["base_card"]
+result_card = data["result_card"]
+
+st.write("次のカードは大きい？ 小さい？")
+
+# 最初のカードを表示
+st.write("最初のカード")
+st.header(
+    f"{base_card['suit']} {base_card['rank']}"
+)
 
 # まだ選択していない場合
 if "choice" not in st.session_state:
@@ -56,26 +77,6 @@ else:
         st.rerun()
 
 
-# タイトル
-st.title("High & Low Game")
-
-# JSONファイルを読み込む
-json_path = Path(__file__).parent.parent / "sample_data" / "highlow.json"
-
-with open(json_path, "r", encoding="utf-8") as f:
-    data = json.load(f)
-
-# カードの情報
-base_card = data["base_card"]
-result_card = data["result_card"]
-
-st.write("次のカードは大きい？ 小さい？")
-
-# 最初のカードを表示
-st.write("最初のカード")
-st.header(
-    f"{base_card['suit']} {base_card['rank']}"
-)
 
 # 次のカードを表示
 # st.write("次のカード")
