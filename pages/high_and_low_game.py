@@ -66,11 +66,12 @@ else:
         st.info("引き分け！ Draw!")
 
     # リセット
+    # リセット
     if st.button("もう一度"):
-        if "choice" in st.session_state:
-            del st.session_state.choice
+        del st.session_state.choice
+        del st.session_state.base_card
+        del st.session_state.result_card
         st.rerun()
-        
 
 
 
