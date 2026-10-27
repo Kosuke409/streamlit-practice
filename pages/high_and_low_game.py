@@ -74,7 +74,7 @@ else:
         del st.session_state.choice
         del st.session_state.base_card
         del st.session_state.result_card
-        st.rerun()
+        
 
 
 
