@@ -1,0 +1,8 @@
+site_name:High & Low Game
+site_url: https://Kosuke409.github.io/streamlit-practice/
+theme:
+  name:mkdocs
+nav:
+  - Home:index.md
+repo_url:https://github.com/Kosuke409/streamlit-practice
+

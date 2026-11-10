@@ -1,2 +1,2 @@
-# streamlit-practice
+# banana
 Streamlitの練習用
