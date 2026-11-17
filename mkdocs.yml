@@ -5,7 +5,8 @@ theme:
 nav:
   - Home: index.md
   - About: about.md
-  - High and Low.Game: howtouse/high_and_low.md
+  - High and Low.Game: houwouse/high_and_low.md
+  - janken: houwouse/janken.md
 repo_url: https://github.com/Kosuke409/streamlit-practice
 extra:
   version:
