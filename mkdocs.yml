@@ -3,6 +3,10 @@ site_url: https://Kosuke409.github.io/streamlit-practice/
 theme:
   name: mkdocs
 nav:
-  - Home:index.md
+  - Home: index.md
+  - About: about.md
+  - High and Low.Game: howtouse/high_and_low.md
 repo_url: https://github.com/Kosuke409/streamlit-practice
-
+extra:
+  version:
+    provider: mike
